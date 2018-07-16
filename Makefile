@@ -46,7 +46,7 @@ bin/hub: $(SOURCES)
 	script/build -o $@
 
 bin/md2roff: $(SOURCES)
-	go build -o $@ github.com/github/hub/md2roff-bin
+	go build -ldflags "-B 0x$(head -c20 /dev/urandom|od -An -tx1|tr -d ' \n')" -o $@ github.com/github/hub/md2roff-bin
 
 test:
 	go test ./...
