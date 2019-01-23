@@ -64,7 +64,7 @@ else
 endif
 
 bin/cucumber:
-	script/bootstrap
+	ln -s /usr/bin/cucumber bin/cucumber
 
 fmt:
 	go fmt ./...
