@@ -13,7 +13,7 @@ import (
 
 	"github.com/github/hub/md2roff"
 	"github.com/github/hub/utils"
-	"github.com/russross/blackfriday"
+	"gopkg.in/russross/blackfriday.v2"
 )
 
 var (
